@@ -1,0 +1,64 @@
+* {
+    font-family: monospace; /* Removed !important for better practice */
+    color: white;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: rgb(24, 24, 24);
+}
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center; /* Center buttons horizontally */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+}
+
+.long-button {
+    position: relative;
+    width: 200px; /* Set desired button width */
+    height: 400px; /* Set desired button height */
+    border: 1px solid rgba(30, 255, 0, 0.158); /* Add semi-transparent green border */
+    background-color: rgb(29, 29, 29); /* Set transparent background */
+    cursor: pointer;
+    overflow: hidden; /* Hide any overflow */
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgba(18, 253, 69, 0.5);
+    transition: 0.5s;
+}
+
+.long-button img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Image fills the width of the button */
+    height: 100%; /* Image fills the height of the button */
+    object-fit: cover; /* Cover ensures the image fills the button without distortion */
+    border-radius: 5px;
+    filter: grayscale(100%) sepia(100%) hue-rotate(90deg); /* Apply green tint */
+}
+
+.long-button span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px; /* Adjust font size as needed */
+    text-shadow: 1px 1px 2px rgb(0, 0, 0); /* Optional: Add text shadow for better visibility */
+    z-index: 1; /* Ensure text is on top of the image */
+}
+
+.long-button:hover {
+    opacity: 0.8; /* Add a hover effect if needed */
+    border: 1px solid rgba(30, 255, 0, 1);
+    box-shadow: 2px 2px 4px rgba(0, 255, 55, 0.7);
+    transition: 0.5s;
+}
